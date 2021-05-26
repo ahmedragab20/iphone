@@ -1,0 +1,499 @@
+html,
+body {
+    overflow-x: hidden;
+    font-family: 'Poppins', sans-serif;
+    -webkit-scroll-behavior: smooth;
+    -moz-scroll-behavior: smooth;
+    -ms-scroll-behavior: smooth;
+    -o-scroll-behavior: smooth;
+    scroll-behavior: smooth;
+    font-size: 100%;
+    position: relative;
+}
+
+/* Global Designs */
+*::selection {background-color: #25252552;color: white;}
+*:focus {outline: none;}
+
+/*To Top Button*/
+.to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 40px;
+    height: 40px;
+    background-color: #000;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    z-index: 2;
+    pointer-events: none;
+    transition: all 0.3s ease-in-out;
+}
+.to-top a {
+    color: white;
+    font-size: 1.2rem;
+    transition: all 0.2s ease-in-out;
+}
+.to-top a:hover {margin-top: -5px;}
+
+.to-top.go {opacity: 1;pointer-events: all;}
+
+/* The Header Design */
+header {background-color: #D4CFC9;padding-bottom: 60px;}
+
+/* Navbar Design */
+nav {
+    min-height: 10vh;
+    width: 100%;
+    position: relative;
+    background-color: transparent;
+    margin: auto;
+    z-index: 2;
+}
+
+.logo {
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    transform: translate(-5%, -50%);
+    cursor: pointer;
+}
+
+.logo h1 a {color: #252525;text-decoration: none;}
+
+.logo {
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    transform: translate(-5%, -50%);
+    cursor: pointer;
+}
+
+.logo h1 a {
+    color: #252525;
+    text-decoration: none;
+    font-size: 1.8rem;
+}
+
+.links {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    -webkit-gap: 10px;
+    -moz-gap: 10px;
+    -ms-gap: 10px;
+    -o-gap: 10px;
+    gap: 10px;
+    height: 10vh;
+    width: 55%;
+    list-style: none;
+    margin-left: auto;
+}
+
+.links li {
+    font-size: 1.19rem;
+    padding: 2px;
+    border-top: 2px solid transparent;
+    transition: all 0.4s ease;
+}
+
+.links li:hover {
+    border-top: 2px solid #252525;
+    transform: translateY(5px);
+}
+
+.links li a {color: #252525;text-decoration: none;}
+
+.links .order-now {
+    background-color: #ffffff98;
+    border-radius: 20px;
+    padding: 5px 8px;
+    font-size: 16px;
+    text-align: center;
+    letter-spacing: 1px;
+    border: 2px solid transparent;
+}
+
+.links .order-now:hover {
+    border: 2px solid #252525ad;
+    background-color: #ffffff;
+    transform: translateY(0);
+}
+
+/* The Burger Midea */
+@media (max-width:991px) {
+    nav {width: 100%;}
+
+    .logo {font-size: 90%;}
+
+    .burger {
+        position: absolute;
+        top: 50%;
+        right: 5%;
+        transform: translate(-5%, -50%);
+        z-index: 2;
+        cursor: pointer;
+    }
+
+    .burger > div {
+        width: 25px;
+        height: 2px;
+        margin: 5px;
+        background-color: #252525;
+        transition: all 0.5s ease-in-out
+    }
+
+    .links {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: column;
+        background-color: white;
+        clip-path: circle(10vh at 95% -10%);
+        transition: all 1s ease-in-out;
+        pointer-events: none;
+    }
+
+    .links.active {
+        -webkit-clip-path: circle(155vh at 100% 10px);
+        -moz-clip-path: circle(155vh at 100% 10px);
+        -ms-clip-path: circle(155vh at 100% 10px);
+        -o-clip-path: circle(155vh at 100% 10px);
+        clip-path: circle(155vh at 100% 10px);
+        pointer-events: all;
+    }
+
+    .links li {
+        opacity: 0;
+        margin-right: 10%;
+        transition: all 1s ease-in-out 0.3s;
+    }
+
+    .links li a {
+        font-size: 1.2rem;
+        transition: all 1s ease-in-out 0.9ms;
+    }
+
+    .links li.fade {opacity: 1}
+}
+
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-4px, 6px);
+    transition: transform 0.5s ease-in-out;
+}
+
+.toggle .line2 {
+    opacity: 0;
+    transition: transform 0.5s ease-in-out;
+}
+
+.toggle .line3 {
+    transform: rotate(45deg) translate(-4px, -6px);
+    transition: transform 0.5s ease-in-out;
+}
+
+/* The Banner Desgin */
+.banner .image img {transition: all 0.5s ease-in-out;}
+.banner .image img:hover {transform: translateY(-15px);}
+
+.banner .content {margin-top: 15%;line-height: 1.5;}
+
+.banner .content h2 {
+    line-height: 2;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.banner .content p {letter-spacing: 1.5px;}
+
+.banner .content button {
+    padding: 3px;
+    width: 120px;
+    height: 36px;
+    background-color: transparent;
+    border: 0.06cm solid #252525;
+    color: #252525;
+    letter-spacing: 2px;
+    margin: 10px 0;
+    box-shadow: inset 0 0 0 0 #252525;
+    font-weight: 700;
+    transition: all 0.4s ease-in-out;
+}
+
+.banner .content button:hover {
+    border: 0.06cm solid #252525;
+    box-shadow: inset 120px 0 0 0 #252525;
+    color: rgb(224, 221, 217);
+}
+
+/* End The Header Design */
+/* First and Second Sections Design */
+.first,
+.second {padding: 80px 0;}
+
+.first {
+    background: linear-gradient(#070707, #030303);
+    color: #dcdcdcde;
+}
+
+.second {
+    background: linear-gradient(#DEDEDE, #D6D6D6);
+    color: #070707;
+}
+
+.first .content,
+.second .content {
+    margin-top: 5%;
+    padding: 40px;
+    line-height: 1.8;
+    letter-spacing: 2px;
+}
+
+.first .content h2,
+.second .content h2 {
+    line-height: 2.5;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+/* The iphon Slider */
+
+.slider {height: 95vh;overflow: hidden;}
+
+.swiper-container {width: 100%;height: 100%;}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* The Post Section Design */
+.post {
+    padding: 100px 0;
+    text-align: center;
+    background: linear-gradient(#8F8F8F, #ffffff);
+    color: #333;
+}
+
+.post .image {width: 40%;margin: auto;}
+
+.post .image img {
+    filter: drop-shadow(0px 30px 30px #333);
+    transition: all 0.5s ease-in-out;
+}
+
+.post .image img:hover {
+    transform: scale(1.01) rotateZ(10deg);
+    filter: drop-shadow(0px 40px 20px #333);
+}
+
+.post .content h2 {
+    padding: 10px 0;
+    font-size: 36px;
+    line-height: 3;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+
+.post .content p {line-height: 2;letter-spacing: 2px;}
+
+.post .content button {
+    padding: 3px;
+    width: 120px;
+    height: 36px;
+    background-color: transparent;
+    border: 0.06cm solid #333;
+    color: #333;
+    letter-spacing: 2px;
+    margin: 10px 0;
+    box-shadow: inset 0 0 0 0 #333;
+    font-weight: 700;
+    transition: all 0.5s ease-in-out;
+}
+
+.post .content button:hover {
+    border: 0.06cm solid #333;
+    box-shadow: inset 120px 0 0 0 #333;
+    color: rgb(224, 221, 217);
+}
+
+/* The Form Design */
+form {padding: 0px 0 50px 0;}
+
+form h2 {padding: 50px;line-height: 3;}
+
+form h3 {
+    padding: 20px 0;
+    line-height: 2;
+    font-size: 23px;
+}
+
+.form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.form input {
+    border: none;
+    background-color: #fff;
+    padding: 5px;
+    font-size: 16px;
+    margin-right: -1.2px;
+    height: 40px;
+    width: 300px;
+    border: 1px solid rgba(51, 51, 51, 0.829);
+    letter-spacing: 2px;
+    transition: 0.4s;
+}
+
+.form input:focus {
+    outline: none;
+    border: 1px solid rgba(51, 51, 51, 0.829);
+    background-color: rgba(163, 163, 163, 0.377);
+}
+
+.form .button {
+    border: none;
+    background-color: rgba(51, 51, 51, 0.829);
+    box-shadow: inset 0 0 0 0 rgba(255, 255, 255, 0.7);
+    padding: 5px;
+    color: #ffffff;
+    font-size: 14px;
+    letter-spacing: 2px;
+    height: 40px;
+    width: 90px;
+    transition: 0.5s;
+}
+
+.form .button:hover {box-shadow: inset 120px 0 0 0 rgb(51, 51, 51);}
+
+/* Footer Design */
+footer {
+    background: linear-gradient(#ffffff, #8f8f8f6b);
+    padding: 40px 0 60px 0;
+    transition: 0.5s;
+}
+
+footer h2 a,
+footer h3 a {color: #333;}
+
+footer h2 a:hover,
+footer h3 a:hover {text-decoration: overline;color: #333;}
+
+footer .icons {margin: 20px;}
+
+footer .icons > i {
+    font-size: 40px;
+    opacity: 0.8;
+    margin: 7px;
+    color: black;
+}
+
+footer .icons > i:hover {opacity: 1;}
+
+footer h4 {margin: 60px auto;}
+
+/*Media Query*/
+@media (min-width:1024px) {
+    .banner .image {margin-top: 10%;}
+}
+
+@media (max-width:1024px) {
+    .banner .content {margin-top: 5%;}
+
+    .first .content,
+    .second .content {
+        margin-top: 0%;
+        padding: 40px;
+        line-height: 1.8;
+        letter-spacing: 2px;
+    }
+}
+
+@media (max-width:768px) {
+    .banner .image {margin-top: 5%;}
+
+    .banner .content {text-align: center;}
+
+    .first,
+    .second {text-align: center;}
+
+    .slider {height: 65vh;}
+
+    .post .image {width: 65%;}
+}
+
+@media (max-width:550px) {
+    .slider {height: 45vh;}
+
+    .post .image img {width: 100%;}
+
+    .post .content h2 {
+        line-height: 1.5;
+        padding: 25px 0;
+        font-size: 30px;
+    }
+
+    .first p,
+    .second p {font-size: 90%;}
+
+    footer .icons > i {font-size: 30px;margin: 8px;}
+}
+
+/* The Fold Screen */
+@media (max-width:280px) {
+    .slider {
+        height: 40vh;
+    }
+
+    .first .container,
+    .second .container {width: 100%;padding: 5px;}
+
+    h2 {line-height: 1.5;padding: 25px 0;font-size: 20px;}
+
+    p {font-size: 75%;}
+
+    .form input {
+        width: 150px;
+        height: 35px;
+        font-size: 11px;
+    }
+
+    .form .button {
+        width: 70px;
+        height: 35px;
+        font-size: 11px;
+    }
+
+    footer .icons > i {font-size: 23px;margin: 8px;}
+}
+/* Done El7amdulla */

@@ -1,0 +1,69 @@
+/* 
+
+That's Some Features That I Usually Use So I Collected them In One File (usually Use It In my Small projects). 
+
+*/
+
+/* center container */
+.container{margin: auto;width: 90%;padding: 0 10px;}
+/* full width container */
+.f-container{width: 100%;margin: auto;padding: 0 10px;}
+/* To make your letters Capital */
+.capital{text-transform: uppercase;}
+/* To make your text in center */
+.txt-center{align-items: center;}
+/* foat left*/
+.f-l{float: left;}
+/* foat right*/
+.f-r{float: right;}
+/* To make overly */
+.overly
+{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+/* To Center My Content Easely */
+.center
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* scroll handle Desgin */
+/* width */
+::-webkit-scrollbar {width: 10px;}
+  
+  /* Track */
+::-webkit-scrollbar-track {background: #f1f1f1}
+   
+  /* Handle */
+::-webkit-scrollbar-thumb {background: #888; }
+  
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {background: #555; }
+/* End The Scroll Handle Styling */
+
+/* Some Colors I Prefer 2 Use in The background "linear-gradient" */
+.test
+{
+background: linear-gradient(#e66465, #9198e5);
+
+background: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);
+
+background: linear-gradient(to left, #333, #333 50%, #eee 75%, #333 75%);
+
+background: linear-gradient(217deg, rgba(255,0,0,.8), rgba(255,0,0,0) 70.71%),
+            linear-gradient(127deg, rgba(0,255,0,.8), rgba(0,255,0,0) 70.71%),
+            linear-gradient(336deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%);
+
+background: linear-gradient(135deg, orange 60%, cyan);
+
+background: linear-gradient(to right,red 20%, orange 20% 40%, yellow 40% 60%, green 60% 80%, blue 80%);
+
+}
