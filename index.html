@@ -42,115 +42,183 @@
         </nav>
         <!-- The Banner -->
         <section class="banner">
+            <div class="circle visible-lg"></div>
+            <div class="m-circle hidden-lg"></div>
             <div class="container">
                 <div class="row">
-                    <div class="image col-md-7 col-md-push-5">
-                        <img src="./images/banner.jpg" alt="banner" class="img-responsive">
+                    <div class="image col-md-6 col-md-push-6 text-center">
+                        <img src="./images/pic1.png" alt="iphone" class="img-resonsive pic1">
                     </div>
-                    <div class="content col-md-5 col-md-pull-7 animate__animated animate__fadeInLeft animate__delay-0s">
-                        <h2 class="h1 hidden-xs">Lorem ipsum dolor</h2>
-                        <h2 class="visible-xs">Lorem ipsum dolor</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos aliquid architecto in, voluptatibus odio quos adipisci vero iusto sunt doloribus officia libero asperiores accusamus ducimus quaerat! Ipsam sequi adipisci cupiditate.</p>
-                        <button type="button">Read More</button>
+                    <ul class="img-list">
+                        <li>
+                            <img src="./images/pic1.png" alt="iphone" class="img-resonsive" onclick="switching('./images/pic1.png')">
+                        </li>
+                        <li>
+                            <img src="./images/pic2.png" alt="iphone" class="img-resonsive" onclick="switching('./images/pic2.png')">
+                        </li>
+                        <li>
+                            <img src="./images/pic3.png" alt="iphone" class="img-resonsive" onclick="switching('./images/pic3.png')">
+                        </li>
+                    </ul>
+                    <div class="txt-content col-md-6 col-md-pull-6">
+                        <h2 class="hidden-xs">iPhone 12 pro is out Now</h2>
+                        <h3 class="visible-xs">iPhone 12 pro is out Now</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque laborum magnam labore quod molestias.</p>
+                        <button type="button" class="order">Oreder Now</button>
                     </div>
                 </div>
             </div>
         </section>
     </header>
-    <!-- First Article -->
-    <article class="first">
+    <!-- The First Post Section -->
+    <div class="post">
         <div class="container">
             <div class="row">
-                <div class="image col-md-7">
-                    <img src="./images/001.jpg" alt="banner" class="img-responsive">
+                <div class="col-md-6">
+                    <div class="image">
+                        <img src="./images/post.png" alt="postImage" class="img-responsive">
+                    </div>
                 </div>
-                <div class="content col-md-5">
-                    <h2>Lorem ipsum dolor</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos aliquid architecto in, voluptatibus odio quos adipisci vero iusto sunt doloribus officia libero asperiores accusamus ducimus quaerat! Ipsam sequi adipisci cupiditate.</p>
+                <div class="col-md-6">
+                    <div class="content text-center">
+                        <h2 class="hidden-xs">culpa repellendus Itaque!</h2>
+                        <h3 class="visible-xs">culpa repellendus Itaque!</h3>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque perferendis ipsam quod dolores natus. Sint
+                            suscipit ut rem. Delectus adipisci iusto, alias animi officiis voluptate. Temporibus tenetur dolor qui
+                            consequuntur.</p>
+                        <button class="order" type="button">Read More</button>
+                    </div>
                 </div>
             </div>
         </div>
-    </article>
-    <!-- Second Article -->
-    <article class="second">
+    </div>
+    <!-- The Second Post Section -->
+    <div class="post2">
         <div class="container">
             <div class="row">
-                <div class="image col-md-7 col-md-push-5">
-                    <img src="./images/002.jpg" alt="banner" class="img-responsive">
+                <div class="col-md-6 col-md-push-6">
+                    <div class="image">
+                        <img src="./images/post2.png" alt="postImage" class="img-responsive">
+                    </div>
                 </div>
-                <div class="content col-md-5 col-md-pull-7">
-                    <h2>Lorem ipsum dolor</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos aliquid architecto in, voluptatibus odio quos adipisci vero iusto sunt doloribus officia libero asperiores accusamus ducimus quaerat! Ipsam sequi adipisci cupiditate.</p>
+                <div class="col-md-6 col-md-pull-6">
+                    <div class="content text-center">
+                        <h2 class="hidden-xs">culpa repellendus Itaque!</h2>
+                        <h3 class="visible-xs">culpa repellendus Itaque!</h3>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque perferendis ipsam quod dolores natus. Sint
+                            suscipit ut rem. Delectus adipisci iusto, alias animi officiis voluptate. Temporibus tenetur dolor qui
+                            consequuntur.</p>
+                        <button class="order" type="button">Read More</button>
+                    </div>
                 </div>
             </div>
         </div>
-    </article>
-    <!--Iphone Slider-->
+    </div>
+    <!-- The Slider Section -->
     <section class="slider">
         <div class="swiper-container mySwiper">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                    <img src="./images/slide1.jpg" alt="slider">
+                    <img src="./images/slide1.jpg" alt="Picture" class="img-responsive">
                 </div>
                 <div class="swiper-slide">
-                    <img src="./images/slide2.jpg" alt="slider">
+                    <img src="./images/slide2.jpg" alt="Picture" class="img-responsive">
                 </div>
                 <div class="swiper-slide">
-                    <img src="./images/slide3.jpg" alt="slider">
+                    <img src="./images/slide3.jpg" alt="Picture" class="img-responsive">
+                </div>
+                <div class="swiper-slide">
+                    <img src="./images/slide4.jpg" alt="Picture" class="img-responsive">
                 </div>
             </div>
-            <div class="swiper-scrollbar"></div>
         </div>
     </section>
-    <!--The Post Section-->
-    <section class="post">
+    <!-- The Cards Section -->
+    <section class="products">
+        <div class="cards-container">
+            <div class="cards">
+                <div class="card col-md-6">
+                    <div class="circle"></div>
+                    <div class="content">
+                        <h2>consect adipis</h2>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque, sit amet consectetur.</p>
+                        <button type="button">Read More</button>
+                    </div>
+                    <img src="./images/card1.png" alt="" class="img1" oncontextmenu="return false">
+                </div>
+                <div class="card2 col-md-6">
+                    <div class="circle"></div>
+                    <div class="content">
+                        <h2>adipisicing elit</h2>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque voluptatem qui ipsum iusto quas,
+                            ad deleniti.</p>
+                        <button type="button">Read More</button>
+                    </div>
+                    <img src="./images/card2.png" alt="" class="img2" oncontextmenu="return false">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--The Second Post Section-->
+    <section class="post-2">
         <div class="container">
             <div class="row">
                 <div class="image">
-                    <img src="./images/post.png" alt="banner" class="img-responsive">
+                    <img src="./images/post-2.png" alt="banner" class="img-responsive">
                 </div>
                 <div class="content">
-                    <h2>Lorem ipsum dolor</h2>
+                    <h2 class="hidden-xs">Lorem ipsum dolor</h2>
+                    <h3 class="visible-xs">Lorem ipsum dolor</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos aliquid architecto in, voluptatibus odio quos adipisci vero iusto sunt doloribus officia libero asperiores accusamus ducimus quaerat! Ipsam sequi adipisci cupiditate.</p>
                     <button type="button">Read More</button>
                 </div>
             </div>
         </div>
     </section>
-    <!-- The Subscribe Form -->
-    <form class="text-center">
-        <div class="container">
-            <h2 class="hidden-xs">Wanna Be One Of iPhone Family ?</h2>
-            <h3 class="visible-xs">Wanna Be One Of iPhone Family ?</h3>
-            <div class="form">
-                <input type="email" placeholder="Type Your E-mail">
-                <button class="button" type="button">Submite</button>
-            </div>
-        </div>
-    </form>
-
-    <!-- The Footer Section -->
-    <footer class="text-center">
+    <!-- The Form Section -->
+    <section class="subscribe">
+        <h2 class="text-center hidden-xs">Be One Of Our Family</h2>
+        <h3 class="text-center visible-xs">Be One Of Our Family</h3>
         <div class="container">
             <div class="row">
-                <div class="icons">
-                    <i class="fab fa-google-plus-g"></i>
-                    <i class="fab fa-google-play"></i>
-                    <i class="fab fa-facebook"></i>
-                    <i class="fab fa-twitter"></i>
-                    <i class="fab fa-instagram"></i>
-                    <i class="fab fa-quora"></i>
-                    <i class="fab fa-wikipedia-w"></i>
-                    <i class="fab fa-stack-overflow"></i>
+                <div class="col-md-6">
+                    <div class="image">
+                        <img src="./images/form.png" alt="sign up" class="img-responsive">
+                    </div>
                 </div>
-                <h4>CREATED BY AHMED RAGAB 2021</h4>
+                <div class="col-md-6">
+                    <form>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" spellcheck="true">
+                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                                else.</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">User Name</label>
+                            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter User Name" spellcheck="true">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" autocomplete="new-password">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Repeat The Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Repeat The Password" autocomplete="new-password">
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">Lorem ipsum dolor sit amet consectetur.</label>
+                        </div>
+                        <button type="button" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
             </div>
+            <h4 class="text-center">created by ahmed ragab 2021</h4>
         </div>
-    </footer>
+    </section>
     <script src="./js/jquery.js"></script>
     <script src="./js/bootstrap.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.5.8/swiper-bundle.min.js" integrity="sha512-sAHYBRXSgMOV2axInO6rUzuKKM5SkItFLlLHQ8YjRD+FBwowtATOs4njP9oim3/MzyAGrB52SLDjpAOLcOT9TA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="./js/app.js"></script>
-</body>
-
-</html>
+</body></html>

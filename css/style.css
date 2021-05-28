@@ -10,11 +10,9 @@ body {
     font-size: 100%;
     position: relative;
 }
-
 /* Global Designs */
-*::selection {background-color: #25252552;color: white;}
+*::selection {background-color: rgba(214, 174, 114, 0.685);color: white;}
 *:focus {outline: none;}
-
 /*To Top Button*/
 .to-top {
     position: fixed;
@@ -22,27 +20,23 @@ body {
     right: 30px;
     width: 40px;
     height: 40px;
-    background-color: #000;
-    border-radius: 50%;
+    background-color: rgb(214, 174, 114);
     display: flex;
     justify-content: center;
     align-items: center;
     opacity: 0;
     z-index: 2;
     pointer-events: none;
+    cursor: pointer;
     transition: all 0.3s ease-in-out;
 }
 .to-top a {
-    color: white;
+    color: #252525;
     font-size: 1.2rem;
     transition: all 0.2s ease-in-out;
 }
-.to-top a:hover {margin-top: -5px;}
-
+.to-top:hover a {margin-top: -5px;}
 .to-top.go {opacity: 1;pointer-events: all;}
-
-/* The Header Design */
-header {background-color: #D4CFC9;padding-bottom: 60px;}
 
 /* Navbar Design */
 nav {
@@ -61,7 +55,6 @@ nav {
     transform: translate(-5%, -50%);
     cursor: pointer;
 }
-
 .logo h1 a {color: #252525;text-decoration: none;}
 
 .logo {
@@ -77,7 +70,7 @@ nav {
     text-decoration: none;
     font-size: 1.8rem;
 }
-
+/* The List Design */
 .links {
     display: flex;
     justify-content: space-around;
@@ -92,21 +85,14 @@ nav {
     list-style: none;
     margin-left: auto;
 }
-
 .links li {
     font-size: 1.19rem;
     padding: 2px;
     border-top: 2px solid transparent;
-    transition: all 0.4s ease;
+    transition: all 0.3s ease;
 }
-
-.links li:hover {
-    border-top: 2px solid #252525;
-    transform: translateY(5px);
-}
-
+.links li:hover {border-top: 2px solid rgb(214, 174, 114);transform: translateY(5px);}
 .links li a {color: #252525;text-decoration: none;}
-
 .links .order-now {
     background-color: #ffffff98;
     border-radius: 20px;
@@ -118,17 +104,18 @@ nav {
 }
 
 .links .order-now:hover {
-    border: 2px solid #252525ad;
+    border: 2px solid rgb(214, 174, 114);
     background-color: #ffffff;
     transform: translateY(0);
 }
-
 /* The Burger Midea */
 @media (max-width:991px) {
-    nav {width: 100%;}
-
-    .logo {font-size: 90%;}
-
+    nav {
+        width: 100%;
+    }
+    .logo {
+        font-size: 90%;
+    }
     .burger {
         position: absolute;
         top: 50%;
@@ -137,7 +124,6 @@ nav {
         z-index: 2;
         cursor: pointer;
     }
-
     .burger > div {
         width: 25px;
         height: 2px;
@@ -145,9 +131,8 @@ nav {
         background-color: #252525;
         transition: all 0.5s ease-in-out
     }
-
     .links {
-        position: fixed;
+        position: absolute;
         width: 100%;
         height: 100vh;
         display: flex;
@@ -159,7 +144,6 @@ nav {
         transition: all 1s ease-in-out;
         pointer-events: none;
     }
-
     .links.active {
         -webkit-clip-path: circle(155vh at 100% 10px);
         -moz-clip-path: circle(155vh at 100% 10px);
@@ -168,111 +152,152 @@ nav {
         clip-path: circle(155vh at 100% 10px);
         pointer-events: all;
     }
-
     .links li {
         opacity: 0;
         margin-right: 10%;
         transition: all 1s ease-in-out 0.3s;
     }
-
-    .links li a {
-        font-size: 1.2rem;
-        transition: all 1s ease-in-out 0.9ms;
-    }
-
+    .links li a {font-size: 1.2rem;transition: all 1s ease-in-out;}
     .links li.fade {opacity: 1}
 }
-
+/* The 'X' button design */
 .toggle .line1 {
     transform: rotate(-45deg) translate(-4px, 6px);
     transition: transform 0.5s ease-in-out;
 }
-
-.toggle .line2 {
-    opacity: 0;
-    transition: transform 0.5s ease-in-out;
-}
-
+.toggle .line2 {opacity: 0;transition: transform 0.5s ease-in-out;}
 .toggle .line3 {
     transform: rotate(45deg) translate(-4px, -6px);
     transition: transform 0.5s ease-in-out;
 }
-
-/* The Banner Desgin */
-.banner .image img {transition: all 0.5s ease-in-out;}
-.banner .image img:hover {transform: translateY(-15px);}
-
-.banner .content {margin-top: 15%;line-height: 1.5;}
-
-.banner .content h2 {
-    line-height: 2;
-    text-transform: uppercase;
-    letter-spacing: 3px;
+/* The banner Design*/
+.banner {
+    position: relative;
+    padding-bottom: 60px;
+    overflow: hidden;
 }
-
-.banner .content p {letter-spacing: 1.5px;}
-
-.banner .content button {
-    padding: 3px;
-    width: 120px;
-    height: 36px;
-    background-color: transparent;
-    border: 0.06cm solid #252525;
-    color: #252525;
+.banner .txt-content h2 {
+    font-size: 2.3rem;
+    text-transform: uppercase;
+    line-height: 2;
     letter-spacing: 2px;
-    margin: 10px 0;
-    box-shadow: inset 0 0 0 0 #252525;
-    font-weight: 700;
+}
+.banner .txt-content h3 {line-height: 2;letter-spacing: 2px;}
+.banner .txt-content p {
+    font-size: 1.04rem;
+    text-transform: capitalize;
+    line-height: 1.8;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+.banner .image {
+    display: flex;
+    justify-content: flex-end;
+    height: 512px;
+}
+.banner .image img {transition: all 0.4s ease-in-out;filter: drop-shadow(20px 20px 25px);}
+.banner .image img:hover {transform: translateY(-20px);filter: drop-shadow(30px 30px 35px);}
+.banner .img-list {
+    display: flex;
+    -webkit-gap: 10px;
+    -moz-gap: 10px;
+    -ms-gap: 10px;
+    -o-gap: 10px;
+    gap: 10px;
+    justify-content: space-around;
+    max-width: 50%;
+    align-items: center;
+    list-style: none;
+    position: absolute;
+    bottom: 50px;
+    left: 8%;
+    margin: 60px -40px;
+}
+.banner .img-list li {
+    width: 90px;
+    border: 2px solid transparent;
     transition: all 0.4s ease-in-out;
 }
 
-.banner .content button:hover {
-    border: 0.06cm solid #252525;
-    box-shadow: inset 120px 0 0 0 #252525;
-    color: rgb(224, 221, 217);
+.banner .img-list li:hover {
+    border: 2px solid rgb(214, 174, 114);
+    transform: translateY(-10px);
 }
 
-/* End The Header Design */
-/* First and Second Sections Design */
-.first,
-.second {padding: 80px 0;}
-
-.first {
-    background: linear-gradient(#070707, #030303);
-    color: #dcdcdcde;
+.banner .img-list li img {
+    width: 100%;
+    padding: 10px;
+    cursor: pointer;
 }
-
-.second {
-    background: linear-gradient(#DEDEDE, #D6D6D6);
-    color: #070707;
-}
-
-.first .content,
-.second .content {
-    margin-top: 5%;
-    padding: 40px;
-    line-height: 1.8;
+/* I Used It As A Global Button */
+.order {
+    padding: 4px;
+    width: 150px;
+    height: 36px;
+    background-color: transparent;
+    color: #111111;
+    border: 2px solid rgb(214, 174, 114);
+    font-size: 1rem;
+    font-weight: 700;
     letter-spacing: 2px;
+    transition: all 0.4s ease-in-out;
 }
-
-.first .content h2,
-.second .content h2 {
-    line-height: 2.5;
-    letter-spacing: 3px;
-    text-transform: uppercase;
+.order:hover {color: white;background-color: rgb(214, 174, 114);}
+/* The Big Screens Circle */
+.banner .circle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(214, 174, 114);
+    clip-path: circle(65% at right 140%);
 }
-
-/* The iphon Slider */
-
-.slider {height: 95vh;overflow: hidden;}
-
+/* The Small Screens Circle */
+.banner .m-circle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(214, 174, 114);
+    clip-path: circle(50% at right -5%);
+}
+/* the post design */
+.post {margin: 10% auto -10% auto;}
+.post h2,
+.post h3 {
+    letter-spacing: 2px;
+    line-height: 2;
+    text-transform: capitalize;
+}
+.post h2 {font-size: 2.4rem;}
+.post p {letter-spacing: 1px;line-height: 1.8;}
+.post .image {overflow: hidden;}
+.post .image img {transition: all 0.3s ease-in-out;}
+.post .image img:hover {transform: translateY(10px);}
+/* Second Post Section */
+.post2 .content {margin-top: 20%;}
+.post2 h2,
+.post2 h3 {
+    letter-spacing: 2px;
+    line-height: 2;
+    text-transform: capitalize;
+}
+.post2 h2 {font-size: 2.4rem;}
+.post2 p {letter-spacing: 1px;line-height: 1.8;}
+.post2 .image {overflow: hidden;}
+.post2 .image img {
+    transition: all 0.3s ease-in-out;
+    width: 70%;
+    margin: auto
+}
+.post2 .image img:hover {transform: translateY(10px);}
+/* The Slider Section Design */
+.slider {margin: 20px auto;height: 80vh;}
 .swiper-container {width: 100%;height: 100%;}
-
 .swiper-slide {
     text-align: center;
-    font-size: 18px;
-    background: #fff;
-    /* Center slide text vertically */
     display: -webkit-box;
     display: -ms-flexbox;
     display: -webkit-flex;
@@ -286,214 +311,371 @@ nav {
     -webkit-align-items: center;
     align-items: center;
 }
-
-.swiper-slide img {
-    display: block;
+/* The Cards Section  */
+.cards-container {
+    padding: 20px 0;
+    letter-spacing: 3px;
+    line-height: 3;
+    width: 90%;
+    margin: auto;
+    margin-bottom: -5%;
+    transition: all 1s ease-in-out;
+}
+.cards {
+    width: 100%;
+    padding: 100px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    overflow: hidden
+}
+.cards .card,
+.cards .card2 {
+    width: 500px;
+    height: 300px;
+    position: relative;
+    border-radius: 20px;
+    transition: 0.5s;
+}
+.cards .card .circle,
+.cards .card2 .circle {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    border-radius: 20px;
+    overflow: hidden;
 }
-
-/* The Post Section Design */
-.post {
-    padding: 100px 0;
-    text-align: center;
-    background: linear-gradient(#8F8F8F, #ffffff);
-    color: #333;
-}
-
-.post .image {width: 40%;margin: auto;}
-
-.post .image img {
-    filter: drop-shadow(0px 30px 30px #333);
+.cards .card .circle::before,
+.cards .card2 .circle::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(189, 189, 189, 0.733);
+    width: 100%;
+    height: 100%;
+    -webkit-clip-path: circle(30% at center);
+    -moz-clip-path: circle(30% at center);
+    -ms-clip-path: circle(30% at center);
+    -o-clip-path: circle(30% at center);
+    clip-path: circle(30% at center);
     transition: all 0.5s ease-in-out;
 }
-
-.post .image img:hover {
-    transform: scale(1.01) rotateZ(10deg);
-    filter: drop-shadow(0px 40px 20px #333);
+.cards .card:hover .circle::before,
+.cards .card2:hover .circle::before {
+    -webkit-clip-path: circle(80% at center);
+    -moz-clip-path: circle(80% at center);
+    -ms-clip-path: circle(80% at center);
+    -o-clip-path: circle(80% at center);
+    clip-path: circle(80% at center);
+    background: linear-gradient(-120deg, rgb(214, 174, 114), #252525)
+}
+.cards .card img,
+.cards .card2 img {
+    height: 270px;
+    position: absolute;
+    right: 0%;
+    transition: 0.5s;
+}
+.cards .card .img1 {right: 23%;bottom: 10%}
+.cards .card2 .img2 {
+    height: 320px;
+    right: 32%;
+    bottom: 4%
+}
+.cards .card:hover .img1 {
+    height: 370px;
+    right: -17%;
+    bottom: 8%
 }
 
-.post .content h2 {
+.cards .card2:hover .img2 {
+    height: 400px;
+    bottom: 0%;
+    right: -3%;
+}
+.cards .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 20px;
+    width: 60%;
+    color: #eee;
+    line-height: 1.8;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    visibility: hidden;
+    transition: all 0.1s ease-in-out 0.1s;
+}
+.cards .content button {
+    border: none;
+    padding: 5px;
+    background-color: #eee;
+    width: 110px;
+    height: 33px;
+    font-size: 1rem;
+    border-radius: 20px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #333;
+}
+.cards .content button:hover {
+    transform: scale(1.09);
+}
+.cards .content h2,
+.cards .content p {
+    letter-spacing: 2px;
+}
+.cards .card:hover .content,
+.cards .card2:hover .content {
+    visibility: visible;
+}
+/* The Post Section Design */
+.post-2 {
     padding: 10px 0;
-    font-size: 36px;
+    margin-top: 100px;
+    text-align: center;
+    background: linear-gradient(rgb(80, 63, 38), #252525);
+    color: #333;
+}
+.post-2 .image {
+    width: 40%;
+    margin: auto;
+    overflow: hidden;
+}
+.post-2 .image img {
+    transition: all 0.5s ease-in-out;
+}
+.post-2 .image img:hover {
+    transform: translateY(20px);
+}
+.post-2 .content {
+    color: #ffffff;
+}
+.post-2 .content h2 {
+    padding: 10px 0;
     line-height: 3;
     letter-spacing: 5px;
     text-transform: uppercase;
 }
-
-.post .content p {line-height: 2;letter-spacing: 2px;}
-
-.post .content button {
+.post-2 .content h3 {
+    padding: 10px 0;
+    line-height: 3;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+.post-2 .content p {
+    line-height: 2;
+    letter-spacing: 2px;
+}
+.post-2 .content button {
     padding: 3px;
     width: 120px;
     height: 36px;
     background-color: transparent;
-    border: 0.06cm solid #333;
-    color: #333;
+    border: 1px solid #ffffff;
+    color: #ffffff;
     letter-spacing: 2px;
     margin: 10px 0;
-    box-shadow: inset 0 0 0 0 #333;
-    font-weight: 700;
+    box-shadow: inset 0 0 0 0 rgb(214, 174, 114);
     transition: all 0.5s ease-in-out;
 }
-
-.post .content button:hover {
-    border: 0.06cm solid #333;
-    box-shadow: inset 120px 0 0 0 #333;
-    color: rgb(224, 221, 217);
-}
-
-/* The Form Design */
-form {padding: 0px 0 50px 0;}
-
-form h2 {padding: 50px;line-height: 3;}
-
-form h3 {
-    padding: 20px 0;
-    line-height: 2;
-    font-size: 23px;
-}
-
-.form {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-}
-
-.form input {
-    border: none;
-    background-color: #fff;
-    padding: 5px;
-    font-size: 16px;
-    margin-right: -1.2px;
-    height: 40px;
-    width: 300px;
-    border: 1px solid rgba(51, 51, 51, 0.829);
-    letter-spacing: 2px;
-    transition: 0.4s;
-}
-
-.form input:focus {
-    outline: none;
-    border: 1px solid rgba(51, 51, 51, 0.829);
-    background-color: rgba(163, 163, 163, 0.377);
-}
-
-.form .button {
-    border: none;
-    background-color: rgba(51, 51, 51, 0.829);
-    box-shadow: inset 0 0 0 0 rgba(255, 255, 255, 0.7);
-    padding: 5px;
+.post-2 .content button:hover {
+    border: 1px solid rgb(214, 174, 114);
+    box-shadow: inset 120px 0 0 0 rgb(214, 174, 114);
     color: #ffffff;
-    font-size: 14px;
-    letter-spacing: 2px;
+}
+/* The Subscribe Section design */
+.subscribe {
+    padding: 60px 0;
+    background: linear-gradient(#252525, rgb(80, 63, 38));
+    color: #ffffff;
+    letter-spacing: 1px;
+}
+.subscribe .image {overflow: hidden;}
+.subscribe .image img {transition: all 0.5s ease-in-out;margin: auto}
+.subscribe .image img:hover {transform: translateY(20px);}
+.subscribe label {font-weight: 500;}
+.subscribe h2 {margin: 60px auto;}
+.subscribe form .form-group input {background-color: transparent;border-radius: 0;}
+.form-control:focus {
+    border-color: transparent;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.473), -1px -1px 2px rgba(0, 0, 0, 0.473);
+}
+.subscribe input[type="checkbox"] {margin: 10px 2px 20px 0;}
+.subscribe form .btn {
+    padding: 5px;
+    width: 120px;
     height: 40px;
-    width: 90px;
-    transition: 0.5s;
+    margin-top: 25px;
+    border-radius: 0;
+    border: 2px solid #fff;
+    box-shadow: inset 0 0 0 0 #fff;
+    background-color: transparent;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease-in-out;
 }
-
-.form .button:hover {box-shadow: inset 120px 0 0 0 rgb(51, 51, 51);}
-
-/* Footer Design */
-footer {
-    background: linear-gradient(#ffffff, #8f8f8f6b);
-    padding: 40px 0 60px 0;
-    transition: 0.5s;
+.subscribe form .btn:hover {
+    border: 2px solid #fff;
+    box-shadow: inset 150px 0 0 0 rgba(214, 174, 114, 0.74);
+    color: rgba(238, 238, 238, 0.952);
 }
-
-footer h2 a,
-footer h3 a {color: #333;}
-
-footer h2 a:hover,
-footer h3 a:hover {text-decoration: overline;color: #333;}
-
-footer .icons {margin: 20px;}
-
-footer .icons > i {
-    font-size: 40px;
-    opacity: 0.8;
-    margin: 7px;
-    color: black;
+.subscribe h4 {
+    padding: 100px 0 60px 0;
+    line-height: 3;
+    letter-spacing: 2px;
+    text-transform: uppercase;
 }
-
-footer .icons > i:hover {opacity: 1;}
-
-footer h4 {margin: 60px auto;}
-
-/*Media Query*/
-@media (min-width:1024px) {
-    .banner .image {margin-top: 10%;}
+/* Media Query */
+@media (min-width:1025px){
+    .banner{min-height: 90vh}
+    .container{margin-top: 10%}
 }
-
 @media (max-width:1024px) {
-    .banner .content {margin-top: 5%;}
-
-    .first .content,
-    .second .content {
-        margin-top: 0%;
-        padding: 40px;
-        line-height: 1.8;
-        letter-spacing: 2px;
+    .banner .img-list {
+        position: absolute;
+        bottom: 55px;
+        left: 3%;
+    }
+    .cards-container {
+        margin: -300px auto; /* To Fix The Swiper height issue */
+        letter-spacing: 3px;
+        line-height: 3;
+    }
+    .cards .card,
+    .cards .card2 {
+        width: auto;
+        width: 300px;
+        height: 200px;
+        align-items: center;
+        margin: 60px auto;
+        transition: all 0.5s ease-in-out;
+    }
+    .cards .card:hover,
+    .cards .card2:hover {height: 350px;}
+    .cards .card,
+    .cards .card2 {margin-bottom: 200px;}
+    .cards .content {
+        width: 100%;
+        top: 0%;
+        left: 0%;
+        font-size: 88%;
+        padding: 10px;
+        text-align: center;
+    }
+    .cards .content button {
+        width: 100px;
+        font-size: 0.9rem;
+        font-weight: bold;
+        color: #252525;
+    }
+    .cards .card img,
+    .cards .card2 img {
+        height: 180px;
+        position: absolute;
+        right: 0%;
+        transition: all 0.5s ease-in-out;
+    }
+    .cards .card .img1 {
+        bottom: 4%;
+        right: 20%;
+    }
+    .cards .card2 .img2 {
+        bottom: 0%;
+        right: 29%;
+        height: 210px;
+    }
+    .cards .card:hover .img1 {
+        height: 200px;
+        bottom: -15%;
+        right: 17%;
+    }
+    .cards .card2:hover .img2 {
+        height: 200px;
+        bottom: -20%;
+        right: 29%;
     }
 }
-
-@media (max-width:768px) {
-    .banner .image {margin-top: 5%;}
-
-    .banner .content {text-align: center;}
-
-    .first,
-    .second {text-align: center;}
-
-    .slider {height: 65vh;}
-
-    .post .image {width: 65%;}
+@media (max-width:991px) {
+    .banner .image {
+        display: flex;
+        justify-content: center;
+        width: 90%;
+        margin: auto;
+    }
+    .banner .img-list {
+        width: 100%;
+        position: relative;
+        margin: 15% 20% -6%;
+    }
+    .banner .txt-content {text-align: center;}
+    .post2 .content {margin: 0% auto -8% auto;}
+    .cards-container {margin-top: -35%}
+    .subscribe label {font-size: 77%}
 }
-
 @media (max-width:550px) {
-    .slider {height: 45vh;}
-
-    .post .image img {width: 100%;}
-
-    .post .content h2 {
-        line-height: 1.5;
-        padding: 25px 0;
-        font-size: 30px;
+    .banner .image {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: auto;
+        padding-top: 30px;
     }
-
-    .first p,
-    .second p {font-size: 90%;}
-
-    footer .icons > i {font-size: 30px;margin: 8px;}
+    .banner .image img {
+        width: 80%;
+    }
+    .banner .img-list {
+        width: 100%;
+        position: relative;
+        margin: 30% 20% -6%;
+    }
+    .banner .img-list li img {
+        padding: 0;
+        width: 50px;
+    }
+    .banner .txt-content {text-align: center;}
+    
+    .post-2 .image {
+        width: 80%;
+        margin: auto;
+        overflow: hidden;
+    }
+    .cards-container {margin-top: -70%}
+    .cards .card{margin: 100px auto;}
+    
+    .subscribe .image {
+        width: 50%;
+        margin: 60px auto
+    }
+    .subscribe h4{font-size: 95%}
 }
-
-/* The Fold Screen */
+/* Samsung Fold Screen */
 @media (max-width:280px) {
-    .slider {
-        height: 40vh;
+    .cards .card .img1 {
+        bottom: 4%;
+        right: 15%;
     }
-
-    .first .container,
-    .second .container {width: 100%;padding: 5px;}
-
-    h2 {line-height: 1.5;padding: 25px 0;font-size: 20px;}
-
-    p {font-size: 75%;}
-
-    .form input {
-        width: 150px;
-        height: 35px;
-        font-size: 11px;
+    .cards .card2 .img2 {
+        bottom: 0%;
+        right: 22%;
     }
-
-    .form .button {
-        width: 70px;
-        height: 35px;
-        font-size: 11px;
+    .cards .card:hover .img1 {
+        height: 190px;
+        bottom: -25%;
+        right: 13%;
     }
-
-    footer .icons > i {font-size: 23px;margin: 8px;}
+    .cards .card2:hover .img2 {
+        height: 190px;
+        bottom: -30%;
+        right: 29%;
+    }
 }
 /* Done El7amdulla */
